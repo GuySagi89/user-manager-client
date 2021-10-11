@@ -1,0 +1,32 @@
+<mat-card class="details-container" *ngIf="usersForm">
+  <h2>Details:</h2>
+  <form [formGroup]="usersForm" (ngSubmit)="saveForm()">
+
+    <div>
+      <h3>First Name:</h3>
+      <input formControlName="firstName" matInput>
+    </div>
+
+    <div>
+      <h3>Last Name:</h3>
+      <input formControlName="lastName" matInput>
+    </div>
+
+    <div>
+      <h3>Email:</h3>
+      <input formControlName="email" matInput>
+    </div>
+
+    <div>
+      <h3>Username:</h3>
+      <input formControlName="username" matInput>
+    </div>
+
+    <div>
+      <h3>Password:</h3>
+      <input formControlName="password" matInput>
+    </div>
+
+    <button [disabled]="usersForm.invalid" mat-raised-button color="primary">Save</button>
+  </form>
+</mat-card>

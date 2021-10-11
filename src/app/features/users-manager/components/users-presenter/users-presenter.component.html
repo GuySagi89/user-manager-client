@@ -1,0 +1,8 @@
+<div class="details-container">
+  <h3>Users:</h3>
+  <div class="users-list" *ngIf="users">
+    <app-user-item *ngFor="let user of users" [user]="user" (delete-user)="deleteUser($event)" (selected-id)="goToEditUser($event)"></app-user-item>
+  </div>
+
+  <button mat-raised-button color="primary" (click)="goToEditUser(-1)">Add User</button>
+</div>
